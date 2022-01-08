@@ -1,3 +1,4 @@
+import 'package:chat/src/res/colors.dart';
 import 'package:chat/src/ui/home.dart';
 import 'package:flutter/material.dart';
 
@@ -12,9 +13,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Flutter Chat UI',
         theme: ThemeData(
-          primarySwatch: Colors.blue,
+          colorScheme: ColorScheme.fromSwatch().copyWith(
+            secondary: AppColors.accentColor,
+            primary: Colors.red,
+          ),
         ),
         debugShowCheckedModeBanner: false,
         home: const Home());

@@ -19,49 +19,49 @@ class Message {
 final User currentUser = User(
   id: 0,
   name: 'Current User',
-  imageUrl: 'assets/images/greg.jpg',
+  imageUrl: 'assets/images/greg.jpeg',
 );
 
 final User greg = User(
   id: 0,
   name: 'Greg',
-  imageUrl: 'assets/images/greg.jpg',
+  imageUrl: 'assets/images/greg.jpeg',
 );
 
 final User james = User(
   id: 1,
   name: 'James',
-  imageUrl: 'assets/images/james.jpg',
+  imageUrl: 'assets/images/james.jpeg',
 );
 
 final User john = User(
   id: 2,
   name: 'John',
-  imageUrl: 'assets/images/john.jpg',
+  imageUrl: 'assets/images/john.jpeg',
 );
 
 final User oliver = User(
   id: 3,
   name: 'Current User',
-  imageUrl: 'assets/images/oliver.jpg',
+  imageUrl: 'assets/images/olivia.jpeg',
 );
 
 final User sam = User(
   id: 4,
   name: 'Sam',
-  imageUrl: 'assets/images/sam.jpg',
+  imageUrl: 'assets/images/sam.jpeg',
 );
 
 final User steven = User(
   id: 5,
   name: 'Steven',
-  imageUrl: 'assets/images/steven.jpg',
+  imageUrl: 'assets/images/steven.jpeg',
 );
 
 final User sophia = User(
   id: 6,
   name: 'Sophia',
-  imageUrl: 'assets/images/sophia.jpg',
+  imageUrl: 'assets/images/sophia.jpeg',
 );
 
 List<User> favorite = [sam, steven, oliver, sophia, john, james, greg];
