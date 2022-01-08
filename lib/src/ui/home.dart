@@ -23,10 +23,7 @@ class Home extends StatelessWidget {
         ),
         title: const Text(
           "Chat",
-          style: TextStyle(
-            fontSize: 28,
-            fontWeight: FontWeight.bold,
-          ),
+          style: AppStyles.appTitleStyle,
         ),
         elevation: 0.0,
         actions: <Widget>[

@@ -1,4 +1,6 @@
 import 'package:chat/src/model/message.dart';
+import 'package:chat/src/model/user.dart';
+import 'package:chat/src/ui/chat.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -48,30 +50,44 @@ class FavoriteContacts extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemCount: favorite.length,
               itemBuilder: (BuildContext ctx, int index) {
-                return Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Column(
-                    children: [
-                      CircleAvatar(
-                        radius: 30,
-                        backgroundImage: AssetImage(favorite[index].imageUrl!),
-                      ),
-                      const SizedBox(height: 6),
-                      Text(
-                        favorite[index].name!,
-                        style: const TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.blueGrey,
+                return GestureDetector(
+                  onTap: () => routeToChat(context, favorite[index]),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Column(
+                      children: [
+                        CircleAvatar(
+                          radius: 30,
+                          backgroundImage:
+                              AssetImage(favorite[index].imageUrl!),
                         ),
-                      ),
-                    ],
+                        const SizedBox(height: 6),
+                        Text(
+                          favorite[index].name!,
+                          style: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.blueGrey,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 );
               },
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  routeToChat(BuildContext context, User user) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (_) {
+          return Chat(user: user);
+        },
       ),
     );
   }
